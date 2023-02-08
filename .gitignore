@@ -1,41 +1,41 @@
-# Compiled Lua sources
-luac.out
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("NaruZeus Hub          صانع السكربت Discord: ZEUS#0254", "Synapse")
+local Tab = Window:NewTab("التلبورت")
+local Section = Tab:NewSection("الأماكن :")
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
-
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+Section:NewButton("النافورة", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2544.08691, 1031.67383, -7638.08057, -0.99938792, -6.1966297e-08, 0.0349834636, -6.35926227e-08, 1, -4.53756357e-08, -0.0349834636, -4.75725486e-08, -0.99938792)
+end)
+Section:NewButton("واجهة البداية", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72821.8828, 64544.9258, 982.969421, 0.00733562326, 7.44753805e-08, -0.999973118, -2.88868929e-08, 1, 7.4265472e-08, 0.999973118, 2.83413328e-08, 0.00733562326)
+end)
+Section:NewButton("المستشفى", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1688, 1060, -16485)
+end)
+Section:NewButton("الشلال", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-34554, 3, 68120)
+end)
+Section:NewButton("الشارع السري", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(602, 19, 334)
+end)
+Section:NewButton("XO", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2498.15, 1014.59, -7291.33)
+end)
+Section:NewButton("بقالة", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2416.64, 1012.99, -7713.01)
+end)
+Section:NewButton("ديسكو ( والعياذ بالله )", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2411.41, 1050.68, -7488.03)
+end)
+Section:NewButton("ديسكو 2 (والعياذ بالله)", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2401.33, 1020.65, 8463.51)
+end)
+Section:NewButton("المسرح", "ButtonInfo", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2702.88, 917.75, 635.309)
+end)
+-- Second Tab
+local Items = Window:NewTab("الأغراض")
+local ItemsSection = Items:NewSection("كلبشات , برقر , غيرها...")
+ItemsSection:NewButton("جميع الأغراض", "ButtonInfo", function()
+   for i,v in pairs (game.Players:GetChildren()) do wait() for i,b in pairs (v.Backpack:GetChildren()) do b.Parent = game.Players.LocalPlayer.Backpack end end
+end)
